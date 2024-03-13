@@ -1,0 +1,128 @@
+:root {
+  --dark-blue: #0a3871;
+  --gray: #495057;
+  --white: #fff;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0 1rem;
+  background-color: #f3f5fc;
+  max-width: 1800px;
+  margin: auto;
+}
+
+.logo {
+  color: var(--dark-blue);
+  font-size: 2rem;
+}
+
+.codigo {
+  color: aqua;
+}
+
+main section {
+  margin-bottom: 2rem;
+}
+.ingresar-texto textarea {
+  display: inline-block;
+  color: var(--dark-blue);
+  font-size: 2rem;
+  font-weight: 900;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+}
+.ingresar-texto textarea::placeholder {
+  color: var(--dark-blue);
+}
+
+.content-botones .advertencia {
+  font-size: 12px;
+  color: var(--gray);
+  margin: 0;
+  display: flex;
+  column-gap: 0.5rem;
+  padding: 1rem 0;
+}
+.botones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.botones button {
+  padding: 24px;
+  gap: 24px;
+  margin-bottom: 24px;
+  width: 343px;
+  justify-content: center;
+  border-radius: 24px;
+  border: transparent;
+  cursor: pointer;
+}
+.botones .boton-encriptar {
+  color: var(--white);
+  background-color: var(--dark-blue);
+}
+.botones .boton-desencriptar {
+  border: thin solid var(--dark-blue);
+}
+
+.resultado-texto {
+  background-color: var(--white);
+  font-size: 23px;
+  border-radius: 2rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+footer p {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+@media (min-width: 768px) {
+  .botones {
+    flex-direction: row;
+    column-gap: 24px;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1440px) {
+  main{
+    display: grid;
+    height: 80vh;
+    grid-template-areas: 
+      "texto texto texto resultado"
+      "texto texto texto resultado"
+      "texto texto texto resultado"
+      "botones botones botones resultado"
+    ;
+     grid-template-columns: repeat(4,1fr);
+     grid-template-rows: repeat(4,1fr);
+
+  }
+  .ingresar-texto {
+    grid-area: texto;
+  }
+  .content-botones{
+    grid-area: botones;
+  }
+  .content-botones .botones{
+    justify-content: center;
+  }
+
+  .resultado-texto{
+    grid-area: resultado;
+  }
+}
