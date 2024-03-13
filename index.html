@@ -12,7 +12,11 @@
     </header>
     <main id="page">
       <section class="ingresar-texto">
-        <textarea type="text" placeholder="Ingrese un texto aqui"></textarea>
+        <textarea
+          class="text_tarea"
+          type="text"
+          placeholder="Ingrese un texto aqui"
+        ></textarea>
       </section>
       <section class="content-botones">
         <figure class="advertencia">
@@ -25,14 +29,17 @@
         </div>
       </section>
       <section class="resultado-texto">
-        <h2 class="mensaje-tituo">Ningún mensaje fue encontrado</h2>
+        <h2 class="mensaje-titulo">Ningún mensaje fue encontrado</h2>
         <p class="mensaje-descripcion">
           Ingresa el texto que desees encriptar o desencriptar.
         </p>
+        <input type="hidden" class="boton-copiar" value="Copiar"/>
       </section>
+
     </main>
     <footer>
       <p>Hecho por Luis Armuto</p>
     </footer>
+    <script src="./src/codigo.js"></script>
   </body>
 </html>

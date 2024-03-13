@@ -58,7 +58,7 @@ main section {
   flex-wrap: wrap;
   justify-content: center;
 }
-.botones button {
+button {
   padding: 24px;
   gap: 24px;
   margin-bottom: 24px;
@@ -67,6 +67,7 @@ main section {
   border-radius: 24px;
   border: transparent;
   cursor: pointer;
+  color: var(--dark-blue);
 }
 .botones .boton-encriptar {
   color: var(--white);
@@ -83,7 +84,18 @@ main section {
   padding: 2rem;
   text-align: center;
 }
-
+.boton-copiar{
+  padding: 24px;
+  gap: 24px;
+  margin-bottom: 24px;
+  width: 100%;
+  justify-content: center;
+  border-radius: 24px;
+  border: transparent;
+  cursor: pointer;
+  color: var(--dark-blue);
+  border: thin solid var(--dark-blue);
+}
 footer p {
   text-align: center;
   font-size: 1.5rem;
@@ -99,30 +111,28 @@ footer p {
 }
 
 @media (min-width: 1440px) {
-  main{
+  main {
     display: grid;
     height: 80vh;
-    grid-template-areas: 
+    grid-template-areas:
       "texto texto texto resultado"
       "texto texto texto resultado"
       "texto texto texto resultado"
-      "botones botones botones resultado"
-    ;
-     grid-template-columns: repeat(4,1fr);
-     grid-template-rows: repeat(4,1fr);
-
+      "botones botones botones resultado";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
   }
   .ingresar-texto {
     grid-area: texto;
   }
-  .content-botones{
+  .content-botones {
     grid-area: botones;
   }
-  .content-botones .botones{
+  .content-botones .botones {
     justify-content: center;
   }
 
-  .resultado-texto{
+  .resultado-texto {
     grid-area: resultado;
   }
 }
