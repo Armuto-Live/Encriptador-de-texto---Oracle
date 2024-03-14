@@ -43,8 +43,12 @@ main section {
 }
 .ingresar-texto textarea::placeholder {
   color: var(--dark-blue);
-}
 
+}
+textarea:focus{
+  border: none;
+  outline: none;
+}
 .content-botones .advertencia {
   font-size: 12px;
   color: var(--gray);
